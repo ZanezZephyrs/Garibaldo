@@ -3,7 +3,7 @@
         <br>
         <span> Seja bem-vinda(o) {{user.name}}</span>
         <ul>
-            <li v-for="nome in nomes" v-bind:key="nome"> {{nome}} </li>
+            <li v-for="nome in nomes"> {{nome}} <button @click="remover(nomes)"> X </button> </li>
         </ul>
     </div>
 </template>
@@ -37,14 +37,17 @@
                 required:true
             }
         },
+    
         data(){
             return {}
+        },
+        methods:{
+            remover(nome){
+                let indexNome = this.nomes.indexOf(nome);
+                this.nomes.splice(indexNome,1);
+
+                this.$emit("remove",nome);
+            }
         }
     }
 </script>
-
-
-
-
-
-
