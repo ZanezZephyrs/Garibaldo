@@ -23,6 +23,21 @@ Vue.use(VueRouter)
     name: 'votacao',
     component: () => import('../views/votacao.vue')
   },
+  {
+    path: '/add_pergunta',
+    name: 'add_pergunta',
+    component: () => import('../views/add_pergunta.vue') 
+  },
+  {
+    path: '/ordemdefala',
+    name: 'ordemdefala',
+    component: () => import('../views/ListaFala.vue') 
+  },
+  {
+    path: '/Form',
+    name: 'Form',
+    component: () => import('../views/Form.vue') 
+  },
 ]
 
 const router = new VueRouter({

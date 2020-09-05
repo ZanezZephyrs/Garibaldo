@@ -30,7 +30,7 @@
       </v-btn>
             <v-spacer></v-spacer>
 
-      <span> aberta: {{instancia.aberta}}</span>
+      <span> Finalizada: {{instancia.aberta? "Sim":"Não"}}</span>
      
     </v-card-actions>
   </v-card>

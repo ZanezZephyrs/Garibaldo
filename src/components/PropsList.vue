@@ -3,7 +3,7 @@
         <br>
         <span> Seja bem-vinda(o) {{user.name}}</span>
         <ul>
-            <li v-for="nome in nomes"> {{nome}} </li>
+            <li v-for="nome in nomes" v-bind:key="nome"> {{nome}} </li>
         </ul>
     </div>
 </template>
