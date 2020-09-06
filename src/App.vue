@@ -5,7 +5,6 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>|
       <router-link to="/votacao"> votacao</router-link>|
-      <router-link to="/add_pergunta"> Criar pergunta</router-link>|
       <router-link to="/ordemdefala"> Ordem de Fala</router-link>|
       <router-link to="/Form"> Form</router-link>|
 

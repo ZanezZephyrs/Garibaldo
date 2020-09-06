@@ -6,14 +6,12 @@
       :counter="100"
       label="titulo"
       required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
+      
     ></v-text-field>
      <v-textarea
         v-model="descricao"
           name="descricao"
           label="Descricao"
-          value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
         ></v-textarea>
     <v-text-field
       v-model="resp1"
@@ -21,8 +19,7 @@
       :counter="100"
       label="Resposta 1"
       required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
+      
     ></v-text-field>
     <v-text-field
       v-model="resp2"
@@ -30,8 +27,6 @@
       :counter="100"
       label="Resposta 2"
       required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
     ></v-text-field>
     <v-text-field
       v-model="resp3"
@@ -39,12 +34,9 @@
       :counter="100"
       label="Resposta 3(opcional)"
       required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
     ></v-text-field>
 
     <v-btn class="mr-4" @click="submit">submit</v-btn>
-    <v-btn @click="clear">clear</v-btn>
   </form>
 
 </template>
@@ -64,8 +56,7 @@ export default {
 
   methods:{
     submit(){
-      console.log(this.titulo_pergunta, this.descricao);
-    }
+      this.$emit('childToParent', this)}
   },
 
   props: {

@@ -43,7 +43,7 @@ export default {
   name: 'HelloWorld',
   data(){
       return{
-          l:[{
+          la:[{
               pergunta:"pergunta 1",
               aberta:true,
               descricao:"xxxxxxxxxxxxxx",
@@ -94,7 +94,7 @@ export default {
 
   },
   props: {
-    msg: String
+    l: Array
   }
 }
 </script>
