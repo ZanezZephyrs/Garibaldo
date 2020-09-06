@@ -29,7 +29,7 @@
         align-items:center;
     }
     img {
-    max-width: 15%;
+    max-width: 30%;
     display: middle;
     }
     h3{

@@ -3,7 +3,7 @@
         <br>
         <span> Seja bem-vinda(o) {{user.name}}</span>
         <ul>
-            <li v-for="nome in nomes" v-bind:key="nome"> {{nome}} <button @click="remover(nomes)"> X </button> </li>
+            <li v-for="nome in nomes" v-bind:key="nome"> {{nome}} <button @click="remover(nome)"> X </button> </li>
         </ul>
     </div>
 </template>
