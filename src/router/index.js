@@ -38,6 +38,11 @@ Vue.use(VueRouter)
     name: 'Form',
     component: () => import('../views/Form.vue') 
   },
+  {
+    path: '/Fim',
+    name: 'Fim',
+    component: () => import('../views/Fim.vue') 
+  },
 ]
 
 const router = new VueRouter({
