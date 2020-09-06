@@ -6,7 +6,6 @@
           <li><router-link to="/">Home</router-link></li>     |  
           <li><router-link to="/about">About</router-link></li>     |  
           <li><router-link to="/votacao">votacao</router-link></li>     |  
-          <li> <router-link to="/add_pergunta">Criar pergunta</router-link></li>     |  
           <li> <router-link to="/ordemdefala">Ordem de Fala</router-link></li>     |  
           <li><router-link to="/Form">Form</router-link></li>
       </ul>

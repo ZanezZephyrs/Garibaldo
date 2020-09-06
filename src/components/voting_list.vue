@@ -43,53 +43,7 @@ export default {
   name: 'HelloWorld',
   data(){
       return{
-          la:[{
-              pergunta:"pergunta 1",
-              aberta:true,
-              descricao:"xxxxxxxxxxxxxx",
-              link:"link",
-              autor:"anonymous",
-          },
-          {
-              pergunta:"pergunta 2",
-              aberta:false,
-              descricao:"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-              link:"link",
-              autor:"anonymous",
-
-          }, 
-          {
-              pergunta:"pergunta 5",
-              aberta:true,
-              descricao:"xxxxxxxxxxxxxx",
-              link:"link",
-                autor:"anonymous",
-
-          },
-          {
-              pergunta:"pergunta 3",
-              aberta:true,
-              descricao:"xxxxxxxxxxxxxx",
-              link:"link",
-              autor:"anonymous",
-
-          },
-          {
-              pergunta:"pergunta 1",
-              aberta:false,
-              descricao:"xxxxxxxxxxxxxx",
-              link:"link",
-              autor:"anonymous",
-
-          }, 
-          {
-              pergunta:"pergunta 3",
-              aberta:true,
-              descricao:"xxxxxxxxxxxxxx",
-              link:"link",
-              autor:"anonymous",
-
-          }],
+          
       }
 
   },
