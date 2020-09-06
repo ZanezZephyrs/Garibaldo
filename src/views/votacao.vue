@@ -58,7 +58,6 @@ export default {
       await axios.post('https://cors-anywhere.herokuapp.com/https://www.strawpoll.me/api/v2/polls', {
           title: obj.titulo_pergunta,
           options: [obj.resp1, obj.resp2],
-          multi: true,
           captcha: true,
         
       })
