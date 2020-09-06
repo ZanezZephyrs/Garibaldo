@@ -20,6 +20,8 @@
 import voting_list from '../components/voting_list'
 import add_pergunta from '../components/add_pergunta_forms'
 
+//import ax from 'axios'
+
 export default {
     data () {
     return {
@@ -34,21 +36,59 @@ export default {
     },
     methods: {
     // Triggered when `childToParent` event is emitted by the child.
-    onChildClick (value) {
+    onChildClick:async function (value) {
       const obj = value;
-      this.lista.push({
-        pergunta:obj.titulo_pergunta,
-        aberta:false,
-        descricao:obj.descricao,
-        link:"link",
-        autor:"anonymous",
-      })
+      
 
       // make request api
 
+        // let request= new Request()
+      
+      // let novo_header=new Headers()
+      // novo_header.append('content-type',"application/json")
+      //novo_header.append('Access-Control-Allow-Origin',"*")
+      
 
-    
+    //https://cors-anywhere.herokuapp.com/
+    //https://www.strawpoll.me/api/v2/polls
+      
+      let id_resposta=0;
+     // let copia_lista=this.lista;
+      const axios = require('axios');
+      await axios.post('https://cors-anywhere.herokuapp.com/https://www.strawpoll.me/api/v2/polls', {
+          title: obj.titulo_pergunta,
+          options: [obj.resp1, obj.resp2],
+          multi: true,
+          captcha: true,
+        
+      })
+        .then(function (response) {
+          console.log(response.data.id);
+          id_resposta=response.data.id;
+          // this.lista.push({
+          //   pergunta:obj.titulo_pergunta,
+          //   aberta:false,
+          //   descricao:obj.descricao,
+          //   link:"https://www.strawpoll.me/" + id_resposta.toString(),
+          //   autor:"anonymous",
+          // })
+          
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+        this.lista.push({
+        pergunta:obj.titulo_pergunta,
+        aberta:false,
+        descricao:obj.descricao,
+        link:"https://www.strawpoll.me/" + id_resposta.toString(),
+        autor:"anonymous",
+      })
     }
+
+
+
   }
 }
 </script>

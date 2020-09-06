@@ -26,7 +26,7 @@
         text
         color="deep-purple accent-4"
       >
-        Vote
+       <a :href="instancia.link"> Vote</a>
       </v-btn>
             <v-spacer></v-spacer>
 
